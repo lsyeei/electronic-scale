@@ -1,0 +1,16 @@
+server:
+  port: 20825
+# 日志配置
+logging:
+  pattern:
+    console: "%d - [%thread] %msg %n"
+  file:
+    name: ./log/logInfo.log
+  level:
+    cn.devhome.app: trace
+config:
+  # 配置文件存放路径
+  path: /config.dat
+scales:
+  # 电子秤脚本路径
+  path: ../../scales

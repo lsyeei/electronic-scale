@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane fx:id="paneWindow" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.devhome.app.view.ModelViewController">
+   <children>
+      <GridPane alignment="CENTER" hgap="10" vgap="10">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="端口" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <ComboBox id="portName" fx:id="portName" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="波特率" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="数据位" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <ComboBox fx:id="baud" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="dataBits" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER_RIGHT" text="校验位" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <ComboBox fx:id="parity" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="停止位" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <ComboBox fx:id="stopBits" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="电子秤" GridPane.halignment="RIGHT" />
+            <ComboBox fx:id="scaleType" prefHeight="30.0" prefWidth="120.0" GridPane.columnIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <Pane GridPane.columnIndex="2">
+         <children>
+            <Label fx:id="scaleName" prefHeight="70.0" prefWidth="200.0" text="请选择已接入的电子秤" textAlignment="CENTER" textFill="#0bd025" wrapText="true">
+               <font>
+                  <Font name="Microsoft YaHei" size="20.0" />
+               </font></Label>
+            <Label fx:id="tips" layoutY="80.0" prefHeight="70.0" prefWidth="200.0" text="串口参数必须与电子秤配置保持一致" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="scaleValue" layoutY="160.0" prefHeight="70.0" prefWidth="200.0" text="" textAlignment="CENTER" textFill="#d70a0a">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="16.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="connectBtn" mnemonicParsing="false" onAction="#connectBtnClick" text=" 连  接 " textAlignment="CENTER" GridPane.halignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="disconnectBtn" mnemonicParsing="false" onAction="#disconnectBtnClick" text=" 断  开 " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin>
+      </GridPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <padding>
+      <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+   </padding>
+</GridPane>

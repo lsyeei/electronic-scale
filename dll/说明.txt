@@ -1,0 +1,3 @@
+将两个库文件考到如下目录
+JAVA_HOME\jre\bin
+C:\Windows\System32
